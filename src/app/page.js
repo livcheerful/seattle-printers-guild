@@ -51,20 +51,6 @@ const pages = [
       </div>
     ),
   },
-  {
-    plate: <Plate title="ABOUT" color="#3667A9" />,
-    printPage: (
-      <div className="min-h-screen">
-        <h1 className="text-3xl">About</h1>
-        <img src="/styleguide.png" />
-        <img src="/styleguide.png" />
-        <img src="/styleguide.png" />
-        <img src="/styleguide.png" />
-        <img src="/styleguide.png" />
-        <img src="/styleguide.png" />
-      </div>
-    ),
-  },
 ];
 
 export default function Home() {
