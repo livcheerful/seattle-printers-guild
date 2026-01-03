@@ -16,10 +16,35 @@ links {
       sys {
         id
       }
+
+      ... on LinkFeature{
+        title
+        image {
+          url
+        }
+        description
+        link
+      }
     }
   }
 }
 `;
+
+const EVENT_GRAPHQL_FIELDS = `
+  ... on Event{
+    sys {
+      id
+    }
+    title
+    image {
+      url
+    }
+    date
+    locationName
+    description
+    linkOutText
+    linkOutUrl
+  }`;
 
 const PAGE_GRAPHQL_FIELDS = `
     slug
@@ -52,6 +77,20 @@ async function fetchGraphQL(query, preview = false) {
       body: JSON.stringify({ query }),
     }
   ).then((response) => response.json());
+}
+
+export async function getEvents() {
+  const entries = await fetchGraphQL(`query {
+  eventCollection(order: date_ASC) {
+    items {
+      ${EVENT_GRAPHQL_FIELDS}
+    }
+  }
+}
+`);
+  const res = entries?.data?.eventCollection?.items;
+  console.log(res);
+  return res;
 }
 
 export async function getPostWithSlug(slug, preview) {

@@ -1,5 +1,6 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types";
+import LinkFeature from "./LinkFeature";
 
 const customMarkdownOptions = (content) => ({
   renderMark: {
@@ -70,6 +71,8 @@ const customMarkdownOptions = (content) => ({
       const block = entry.block?.find((block) => block.sys.id === id);
       if (!entry) return null;
       switch (block.__typename) {
+        case "LinkFeature":
+          return <LinkFeature block={block} />;
       }
     },
     [INLINES.HYPERLINK]: (node) => {

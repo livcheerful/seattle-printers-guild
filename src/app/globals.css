@@ -12,12 +12,17 @@
   font-style: normal;
 }
 
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-spg-yellow: #FCC94C;
+  --color-spg-green: #439846;
+  --color-spg-blue: #3667A9;
+  --color-spg-pink: #DE98B4;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-body: "Arial", sans-serif;
+  --font-spg: "SPG", sans-serif
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,5 +35,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'SPG', Arial, Helvetica, sans-serif;
+  font-family:  Arial, Helvetica, sans-serif;
 }
