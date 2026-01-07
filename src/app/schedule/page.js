@@ -6,8 +6,10 @@ export default async function Page({}) {
   const events = await getEvents();
   return (
     <div
-      className="w-full h-dvh bg-cover"
-      style={{ backgroundImage: `url(/grid.png)` }}
+      className="w-full h-dvh bg-cover bg-repeat-y"
+      style={{
+        backgroundImage: `url(/grid.png)`,
+      }}
     >
       <Navbar />
       <div className="p-4 w-full">

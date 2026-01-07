@@ -2,11 +2,11 @@ import StickyNote from "./StickyNote";
 
 export default function Calendar({ events }) {
   return (
-    <div className="text-black grid grid-cols-3 gap-3">
+    <div className="text-black flex flex-col items-center md:grid md:grid-cols-3 gap-10 md:gap-3">
       {events.map((e, i) => {
         const d = new Date(e.date);
         return (
-          <div className="w-96 relative" key={i}>
+          <div className="w-2/3 md:w-64 lg:w-80 relative" key={i}>
             {e.image?.url ? (
               <img
                 className="rotate-3 drop-shadow-2xl"
