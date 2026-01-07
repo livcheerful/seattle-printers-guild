@@ -38,7 +38,7 @@ export default async function Home() {
         </StickyNote>
       </Link>
 
-      <div className="hidden md:block md:absolute right-4 top-8 w-1/3 h-1/2">
+      <div className="hidden  md:absolute right-4 top-8 w-1/3 h-1/2">
         <ScrapbookText text={"Upcoming event:"} />
         <div>
           <ScrapbookText
