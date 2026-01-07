@@ -1,7 +1,7 @@
 export default function ScrapbookText({ text, className }) {
   function textToScrapbook(text) {
     return text.split("").map((char, i) => {
-      if (char == " ") return <div></div>;
+      if (char == " ") return <div key={i}></div>;
       return (
         <img
           key={i}

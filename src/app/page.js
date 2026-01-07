@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import StickyNote from "./components/StickyNote";
 import ScrapbookText from "./components/ScrapbookText";
 
@@ -17,7 +19,7 @@ export default async function Home() {
           Seattle Printers' Guild
         </h1>
       </div>
-      <a href="/schedule">
+      <Link href="/schedule">
         <StickyNote className=" absolute -rotate-6 text-black top-8 left-12 bg-spg-yellow p-4 font-spg  text-2xl w-64 ">
           <div className="text-center font-black text-4xl">Upcoming events</div>
           <ul className="list-disc list-inside font-body font-bold text-sm">
@@ -32,7 +34,7 @@ export default async function Home() {
               })}
           </ul>
         </StickyNote>
-      </a>
+      </Link>
 
       <div className="absolute right-4 top-8 w-1/3 h-1/2">
         <ScrapbookText text={"Upcoming event:"} />
