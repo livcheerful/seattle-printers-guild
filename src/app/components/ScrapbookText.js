@@ -8,6 +8,7 @@ export default function ScrapbookText({ text, className }) {
           className="min-w-0 shrink"
           style={{ rotate: `${Math.random() * 10 - 5}deg` }}
           src={`/letter/${char}.png`}
+          alt={char}
         />
       );
     });
