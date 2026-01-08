@@ -49,7 +49,7 @@ export default async function Home() {
           />
         </div>
       </div>
-      <div className="md:absolute md:bottom-4 w-full flex flex-col md:flex-row items-start justify-between px-10 h-fit">
+      <div className="md:absolute md:bottom-4 w-full flex flex-col md:flex-row items-end justify-between px-10 h-fit">
         <StickyNote className="rotate-3 text-black font-bold text-center p-2 font-spg text-2xl bg-spg-pink grow-0 ">
           Join our mailing list
           <iframe
