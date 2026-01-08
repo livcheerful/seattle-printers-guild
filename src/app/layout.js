@@ -3,7 +3,7 @@ import { getNavbar } from "../../api";
 import Navbar from "./components/Navbar";
 export const metadata = {
   title: "Seattle Printers' Guild",
-  description: "A collective of printmakers in Seattle, WA.",
+  description: "Providing free printmaking workshops in the Seattle area.",
 };
 
 export default async function RootLayout({ children }) {
