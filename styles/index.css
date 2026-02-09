@@ -1,0 +1,159 @@
+:root {
+  --spg-pink: #d49bb3;
+  --spg-red: #d1513d;
+  --spg-yellow: #f4cb63;
+  --spg-green: #5a9650;
+  --spg-blue: #4266a4;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+}
+
+.pink { color: var(--spg-pink) }
+.red { color: var(--spg-red) }
+.yellow { color: var(--spg-yellow) }
+.green { color: var(--spg-green) }
+.blue { color: var(--spg-blue) }
+
+.nav {
+    position: fixed;
+    display: flex;
+    top: 0;
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    justify-content: space-around;
+}
+.nav>a {
+    text-decoration: none;
+    background-color: white;
+}
+.nav>a:hover {
+    text-decoration: underline;
+}
+
+
+.section {
+    display: flex;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 2rem 2rem;
+}
+.section-text {
+    max-width: 35rem;
+}
+
+.splash {
+    font-weight: 700;
+    font-size: 4rem;
+    text-align: right;
+}
+
+.splash-text {
+    display: inline-block;
+    position: relative;
+    width: 11rem;
+    height: 4rem;
+    vertical-align: -6px;
+}
+
+.splash-text>div {
+    position: absolute;
+    right: 0;
+    opacity: 0;
+}
+
+.splash-text>div:nth-child(1) { animation: roll 8s linear infinite 0s; }
+.splash-text>div:nth-child(2) { animation: roll 8s linear infinite 2s; }
+.splash-text>div:nth-child(3) { animation: roll 8s linear infinite 4s; }
+.splash-text>div:nth-child(4) { animation: roll 8s linear infinite 6s; }
+
+
+.workshop {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.workshop-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+    width: 3rem;
+}
+.workshop-date>div:nth-child(1) {
+    text-transform: capitalize;
+}
+.workshop-date>div:nth-child(2) {
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.workshop-details {
+    padding: 1rem;
+}
+.workshop-details>div:nth-child(1) {
+    font-weight: 700;
+}
+.workshop-details>div:nth-child(3) {
+    margin-bottom: 0.5rem;
+}
+
+.workshop a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    border-width: 0;
+    background-color: var(--spg-green);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.workshop a.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.contact > div {
+    margin-bottom: 1rem;
+}
+.contact-email {
+    font-weight: 700;
+}
+
+@keyframes roll {
+    0% {
+        opacity: 0;
+        margin-top: 0;
+    }
+
+    3% {
+        opacity: 1;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+        margin-top: 0;
+    }
+
+    30% {
+        opacity: 0;
+        margin-top: 5rem;
+    }
+
+    100% {
+        opacity: 0;
+        margin-top: 0;
+    }
+}
