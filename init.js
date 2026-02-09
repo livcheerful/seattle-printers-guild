@@ -1,5 +1,6 @@
 window.onload = async () => {
     loadWorkshops();
+    loadPastEvents();
 }
 
 const MONTHS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
@@ -12,13 +13,15 @@ const divWithContent = (content, parent) => {
 }
 
 const loadWorkshops = () => {
+    const currentYear = new Date(Date.now()).getFullYear();
     const currentMonth = new Date(Date.now()).getMonth() + 1;
     const currentDate = new Date(Date.now()).getDate() + 1;
 
     WORKSHOPS.sort((a, b) => { return a.month == b.month ? a.day > b.day : a.month > b.month});
 
     const workshopContainer = document.getElementById("workshops");
-    const upcomingWorkshops = WORKSHOPS.filter(w => w.month > currentMonth || (w.month == currentMonth && w.day >= currentDate));
+    const upcomingWorkshops = WORKSHOPS
+        .filter(w => w.year >= currentYear && (w.month > currentMonth || (w.month == currentMonth && w.day >= currentDate)));
     upcomingWorkshops.forEach(w => {
         const workshopDiv = document.createElement("div");
         workshopDiv.classList.add("workshop")
@@ -49,29 +52,40 @@ const loadWorkshops = () => {
         workshopDiv.appendChild(detailsDiv);
         workshopContainer.appendChild(workshopDiv);
     })
+}
 
-    // Eventually this could be a slideshow of photos
+const loadPastEvents = () => {
     const pastWorkshopContainer = document.getElementById("past-events");
-    const pastWorkshops = WORKSHOPS
-        .filter(w => w.month < currentMonth || (w.month == currentMonth && w.day < currentDate))
-        .slice(0, 3);
-    pastWorkshops.forEach(w => {
-        const workshopDiv = document.createElement("div");
-        workshopDiv.classList.add("workshop")
-        const dateDiv = document.createElement("div");
-        dateDiv.classList.add("workshop-date")
-        divWithContent(MONTHS[w.month - 1], dateDiv);
-        divWithContent(w.day, dateDiv);
-        workshopDiv.appendChild(dateDiv);
+    const pastWorkshops = WORKSHOPS.filter(w => w.past).slice(0, 3);
+    const slideIds = [];
+    pastWorkshops.forEach((w, i) => {
+        w.imgs.forEach(src => {
+            const slide = document.createElement("div");
+            slide.classList.add("slide");
+            slide.id = src;
+            slideIds.push(src);
 
-        const detailsDiv = document.createElement("div");
-        detailsDiv.classList.add("workshop-details")
-        divWithContent(w.title, detailsDiv);
-        divWithContent(w.time, detailsDiv);
-        divWithContent(w.location, detailsDiv);
-        divWithContent(w.description, detailsDiv);
+            const imgContainer = document.createElement("div");
+            imgContainer.classList.add("slide-img");
+            const img = document.createElement("img");
+            img.src = "img/" + src;
+            if (i > 0) img.loading = "lazy";
+            imgContainer.appendChild(img);
+            slide.appendChild(imgContainer)
 
-        workshopDiv.appendChild(detailsDiv);
-        pastWorkshopContainer.appendChild(workshopDiv);
+            const detailsDiv = document.createElement("div");
+            detailsDiv.classList.add("slide-details")
+            divWithContent(w.title, detailsDiv);
+            divWithContent(`${MONTHS[w.month - 1]} ${w.day}, ${w.year}`, detailsDiv);
+            divWithContent(w.location, detailsDiv);
+            slide.appendChild(detailsDiv);
+
+            pastWorkshopContainer.appendChild(slide);
+        })
     })
+    setInterval(() => {
+        const slide = pastWorkshopContainer.querySelector(".slide");
+        const slideWidth = slide.getBoundingClientRect().width;
+        pastWorkshopContainer.scrollTo({left: (pastWorkshopContainer.scrollLeft + slideWidth) % (slideWidth * slideIds.length) });
+    }, 5000);
 }
