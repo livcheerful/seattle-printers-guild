@@ -9,6 +9,7 @@
 body {
     font-family: 'Arial', sans-serif;
     font-size: 16px;
+    margin:0;
 }
 
 .pink { color: var(--spg-pink) }
@@ -20,17 +21,43 @@ body {
 .nav {
     position: fixed;
     display: flex;
+    flex-direction: column;
     top: 0;
-    width: 100%;
-    margin-top: 1rem;
     font-size: 1.5rem;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: start;
+    background-color: #ffffffee;
+    z-index: 20;
+    margin-left: 0;
+    width: 100%;
+    padding: 1rem .5rem;
 }
-.nav>a {
+
+.nav .title {
     text-decoration: none;
-    background-color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    color: black;
+    flex-grow: 1;
+    margin: 0;
 }
-.nav>a:hover {
+
+.nav .title>a:hover {
+    text-decoration: underline;
+}
+
+.nav .options {
+    gap: 2rem;
+    display: flex;
+    flex-grow: 2;
+    align-items: end;
+    justify-content: space-between;
+}
+.nav .options>a {
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav .options>a:hover {
     text-decoration: underline;
 }
 
