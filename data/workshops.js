@@ -1,15 +1,5 @@
 const WORKSHOPS = [
     {
-        "title": "Seattle Art Book Fair",
-        "month": 5,
-        "day": 7,
-        "year": 2026,
-        "time": "11 AM - 5 PM",
-        "description": "Come say hi to the guild at Seattle Art Book Fair.",
-        "location": "Washington Hall",
-        "url": ""
-    },
-    {
         "title": "Print and Bookmaking Workshop",
         "month": 4,
         "day": 17,
