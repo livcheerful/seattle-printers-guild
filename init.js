@@ -17,7 +17,8 @@ const loadWorkshops = () => {
     const currentMonth = new Date(Date.now()).getMonth() + 1;
     const currentDate = new Date(Date.now()).getDate() + 1;
 
-    WORKSHOPS.sort((a, b) => { return a.month == b.month ? a.day > b.day : a.month > b.month});
+    // Sort by year first, then month, then date
+    WORKSHOPS.sort((a, b) => { return a.year == b.year ? (a.month == b.month ? a.day > b.day : a.month > b.month) : a.year > b.year});
 
     const workshopContainer = document.getElementById("workshops");
     const upcomingWorkshops = WORKSHOPS
@@ -56,7 +57,7 @@ const loadWorkshops = () => {
 
 const loadPastEvents = () => {
     const pastWorkshopContainer = document.getElementById("past-events");
-    const pastWorkshops = WORKSHOPS.filter(w => w.past).slice(0, 3);
+    const pastWorkshops = WORKSHOPS.reverse().filter(w => w.past).slice(0, 3);
     const slideIds = [];
     pastWorkshops.forEach((w, i) => {
         w.imgs.forEach(src => {
@@ -86,6 +87,7 @@ const loadPastEvents = () => {
     setInterval(() => {
         const slide = pastWorkshopContainer.querySelector(".slide");
         const slideWidth = slide.getBoundingClientRect().width;
-        pastWorkshopContainer.scrollTo({left: (pastWorkshopContainer.scrollLeft + slideWidth) % (slideWidth * slideIds.length) });
+        const scrollIdx = Math.round(pastWorkshopContainer.scrollLeft / slideWidth) + 1;
+        pastWorkshopContainer.scrollTo({left: (scrollIdx % slideIds.length) * slideWidth });
     }, 5000);
 }

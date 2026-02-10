@@ -49,5 +49,15 @@ const WORKSHOPS = [
         "time": "1 - 3 PM",
         "location": "1121 1st Ave",
         "imgs": ["251214-1.jpg", "251214-2.jpg"]
+    },
+    {
+        "past": true,
+        "title": "Stencil Screen Printing Workshop",
+        "month": 11,
+        "day": 16,
+        "year": 2025,
+        "time": "1 - 3 PM",
+        "location": "1121 1st Ave",
+        "imgs": ["251116-1.jpg", "251116-2.jpg"]
     }
 ]

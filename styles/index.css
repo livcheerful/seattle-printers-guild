@@ -101,6 +101,13 @@ body {
 .splash-text>div:nth-child(3) { animation: roll 8s linear infinite 4s; }
 .splash-text>div:nth-child(4) { animation: roll 8s linear infinite 6s; }
 
+#livery {
+    width: 10rem;
+    margin: 2rem auto;
+}
+#livery img {
+    width: 100%;
+}
 
 .workshop {
     display: flex;
@@ -188,6 +195,9 @@ body {
 }
 .contact-email {
     font-weight: 700;
+}
+.contact-signup {
+    text-align: center;
 }
 
 @keyframes roll {
