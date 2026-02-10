@@ -1,11 +1,11 @@
 const WORKSHOPS = [
     {
-        "title": "Print and Bookmaking Workshop",
+        "title": "Make Your Own Book",
         "month": 4,
         "day": 17,
         "year": 2026,
-        "time": "5 - 8 PM",
-        "description": "Design and print a cover, then bind a small journal with us at Miller Community Center! Details of this workshop are subject to change.",
+        "time": "4 - 7 PM",
+        "description": "Drop-in to make your own book using printmaking and saddle stitch binding techniques! No experience needed, all ages welcome. We will have plenty of paper, thread, sewing needles and all the other materials needed for you to make your own book to take home.",
         "location": "Miller Community Center",
         "url": ""
     },
@@ -14,20 +14,19 @@ const WORKSHOPS = [
         "month": 3,
         "day": 21,
         "year": 2026,
-        "time": "11 - 2 PM",
-        "description": "A hands-on screenprinting workshop! Walk through the steps of designing, making, and printing with a small screen in an embroidery hoop.",
+        "time": "11:30 - 2:30 PM",
+        "description": "Learn the basics of screenprinting with the Seattle Printers' Guild! You will design your own small image, create a screen, and make prints of your design. No experience necessary, drop in at any time. ",
         "location": "Federal Way Library 1st Ave",
         "url": "https://partiful.com/e/sfw0JFp7JiICEu8lDUtq"
     },
     {
         "past": true,
-        "title": "Saddle-stitch Book Workshop",
+        "title": "Saddle Stitch Bookbinding",
         "month": 1,
         "day": 25,
         "year": 2026,
         "time": "1 - 3 PM",
-        "description": "Join us for a day of making your own sketchbooks/journals using the saddle stitch sewing technique! No experience necessary, materials provided.",
-        "location": "Capitol Hill Branch Library Meeting Room",
+        "location": "Capitol Hill Branch Library",
         "imgs": ["260125-1.jpg"]
     },
     {
@@ -42,7 +41,7 @@ const WORKSHOPS = [
     },
     {
         "past": true,
-        "title": "Stencil Screen Printing Workshop",
+        "title": "Stencil Screen Printing",
         "month": 11,
         "day": 16,
         "year": 2025,
