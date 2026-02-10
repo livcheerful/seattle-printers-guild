@@ -8,8 +8,12 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    margin:0;
+    font-size: 16px;
+    margin: 0;
+}
+
+.text {
+    line-height: 1.5rem;
 }
 
 .pink { color: var(--spg-pink) }
@@ -76,7 +80,7 @@ body {
     padding: 8rem;
 }
 
-.splash {
+.splash-title {
     font-weight: 700;
     font-size: 4rem;
     text-align: right;
@@ -199,6 +203,65 @@ body {
 .contact-signup {
     text-align: center;
 }
+
+@media (orientation: portrait) and (max-width: 1200px) {
+    .nav .title {
+        font-size: 2rem;
+    }
+    .nav .options {
+        gap: 1rem;
+        font-size: 1rem;
+    }
+
+    .section {
+        height: unset;
+    }
+    .section:last-child {
+        margin-bottom: 15rem;
+    }
+    .section-image {
+        padding: unset;
+    }
+
+    #splash {
+        flex-direction: row-reverse;
+    }
+
+    .splash-title {
+        font-size: 3rem;
+        -webkit-text-stroke: 8px white;
+        paint-order: stroke fill;
+        z-index: 200;
+        margin-top: 10rem;
+    }
+    .splash-text {
+        vertical-align: -20px;
+    }
+    .splash-img {
+        position: absolute;
+    }
+    .splash-img img {
+        width: 100%;
+    }
+
+    #past-events {
+        height: 50vh;
+        width: 80vw;
+    }
+    .slide {
+        height: 100%;
+        width: unset;
+    }
+    .slide-img {
+        height: 50vh;
+        width: 100%;
+    }
+    .slide-img img {
+        height: 100%;
+        width: auto;
+    }
+}
+
 
 @keyframes roll {
     0% {

@@ -33,7 +33,8 @@ const loadWorkshops = () => {
         workshopDiv.appendChild(dateDiv);
 
         const detailsDiv = document.createElement("div");
-        detailsDiv.classList.add("workshop-details")
+        detailsDiv.classList.add("workshop-details");
+        detailsDiv.classList.add("text");
         divWithContent(w.title, detailsDiv);
         divWithContent(w.time, detailsDiv);
         divWithContent(w.location, detailsDiv);
