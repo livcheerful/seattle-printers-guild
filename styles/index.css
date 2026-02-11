@@ -1,0 +1,325 @@
+:root {
+  --spg-pink: #d49bb3;
+  --spg-red: #d1513d;
+  --spg-yellow: #f4cb63;
+  --spg-green: #5a9650;
+  --spg-blue: #4266a4;
+  --spg-black: #000;
+}
+
+@font-face {
+    font-family: "SPG";
+    src: url("../public/fonts/SeattlePrintersGuild-Regular.ttf");
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    background: url("../public/grid.png") no-repeat center;
+    background-size: cover;
+}
+
+h1, h2, h3 {
+    font-family: "SPG";
+}
+
+.text {
+    line-height: 1.5rem;
+}
+
+.pink { color: var(--spg-pink) }
+.red { color: var(--spg-red) }
+.yellow { color: var(--spg-yellow) }
+.green { color: var(--spg-green) }
+.blue { color: var(--spg-blue) }
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    font-size: 1.2rem;
+    justify-content: space-between;
+    align-items: start;
+    z-index: 20;
+    margin-left: 0;
+    width: 100%;
+    padding: 1rem .5rem;
+}
+
+.nav .title {
+    font-family: "SPG";
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--spg-black);
+    flex-grow: 1;
+    margin: 0;
+}
+
+.nav .title>a:hover {
+    text-decoration: underline;
+}
+
+.nav .options {
+    gap: 1.5rem;
+    display: flex;
+    flex-grow: 2;
+    align-items: end;
+    justify-content: space-between;
+}
+.nav .options>a {
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav .options>a:hover {
+    text-decoration: underline;
+}
+
+
+.section {
+    display: flex;
+    min-height: 500px;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 2rem 8rem;
+}
+.section-text {
+    max-width: 35rem;
+}
+.section-image {
+    padding: 8rem;
+}
+
+.splash-title {
+    font-family: "SPG";
+    font-weight: 700;
+    font-size: 4rem;
+    text-align: right;
+}
+
+.splash-text {
+    display: inline-block;
+    position: relative;
+    width: 11rem;
+    height: 4rem;
+    vertical-align: -6px;
+}
+
+.splash-text>div {
+    position: absolute;
+    right: 0;
+    opacity: 0;
+}
+
+.splash-text>div:nth-child(1) { animation: roll 8s linear infinite 0s; }
+.splash-text>div:nth-child(2) { animation: roll 8s linear infinite 2s; }
+.splash-text>div:nth-child(3) { animation: roll 8s linear infinite 4s; }
+.splash-text>div:nth-child(4) { animation: roll 8s linear infinite 6s; }
+
+#livery {
+    width: 10rem;
+    margin: 2rem auto;
+}
+#livery img {
+    width: 100%;
+}
+
+.workshop {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.workshop-date {
+    font-family: "SPG";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+    width: 3rem;
+    font-size: 1.8rem;
+}
+.workshop-date>div:nth-child(1) {
+    text-transform: capitalize;
+    line-height: 1.5rem;
+}
+.workshop-date>div:nth-child(2) {
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.workshop-details {
+    padding: 1rem;
+}
+.workshop-details>div:nth-child(1) {
+    font-family: "SPG";
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+.workshop-details>div:nth-child(3) {
+    margin-bottom: 0.5rem;
+}
+
+.workshop a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-family: "SPG";
+    font-size: 1rem;
+    font-weight: 800;
+    margin-top: 0.5rem;
+    border: 3px solid var(--spg-black);
+    background-color: var(--spg-green);
+    color: white;
+    border-radius: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0.3rem 0.3rem 0 var(--spg-black);
+}
+
+.workshop a.disabled {
+    color: #999;
+    border-color: #999;
+    background-color: #ccc;
+    cursor: not-allowed;
+    box-shadow: 0.3rem 0.3rem 0 #999;
+}
+
+#past-events {
+    display: flex;
+    width: 70vw;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    border: 3px solid var(--spg-black);
+    border-radius: 2rem;
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+}
+.slide-img {
+    width: 70vw;
+    height: 100%;
+}
+.slide-img > img {
+    width: 100%;
+}
+.slide-details {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+.slide-details>div:nth-child(2) {
+    text-transform: capitalize;
+}
+
+.contact > div {
+    margin-bottom: 1rem;
+}
+.contact-email {
+    font-weight: 700;
+}
+.contact-signup {
+    text-align: center;
+}
+.contact-signup iframe {
+    width: 100%;
+    border: 3px solid var(--spg-black);
+    border-radius: 2rem;
+}
+
+@media (orientation: portrait) and (max-width: 1200px) {
+    .nav .title {
+        font-size: 2rem;
+    }
+    .nav .options {
+        gap: 1rem;
+        font-size: 1rem;
+    }
+
+    .section {
+        height: unset;
+    }
+    .section:last-child {
+        margin-bottom: 15rem;
+    }
+    .section-image {
+        padding: unset;
+    }
+
+    #splash {
+        flex-direction: row-reverse;
+    }
+
+    .splash-title {
+        font-size: 3rem;
+        -webkit-text-stroke: 8px white;
+        paint-order: stroke fill;
+        z-index: 200;
+        margin-top: 10rem;
+    }
+    .splash-text {
+        vertical-align: -20px;
+    }
+    .splash-img {
+        position: absolute;
+    }
+    .splash-img img {
+        width: 100%;
+    }
+
+    #past-events {
+        height: 50vh;
+        width: 80vw;
+    }
+    .slide {
+        height: 100%;
+        width: unset;
+    }
+    .slide-img {
+        height: 50vh;
+        width: 100%;
+    }
+    .slide-img img {
+        height: 100%;
+        width: auto;
+    }
+}
+
+
+@keyframes roll {
+    0% {
+        opacity: 0;
+        margin-top: 0;
+    }
+
+    3% {
+        opacity: 1;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+        margin-top: 0;
+    }
+
+    30% {
+        opacity: 0;
+        margin-top: 5rem;
+    }
+
+    100% {
+        opacity: 0;
+        margin-top: 0;
+    }
+}
