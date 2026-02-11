@@ -1,7 +1,7 @@
-window.onload = async () => {
+window.addEventListener('DOMContentLoaded', () => {
     loadWorkshops();
     loadPastEvents();
-}
+})
 
 const MONTHS = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
 
