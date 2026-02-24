@@ -7,7 +7,7 @@ const WORKSHOPS = [
         "time": "4 - 7 PM",
         "description": "Drop-in to make your own book using printmaking and saddle stitch binding techniques! No experience needed, all ages welcome. We will have plenty of paper, thread, sewing needles and all the other materials needed for you to make your own book to take home.",
         "location": "Miller Community Center",
-        "url": ""
+        "url": "https://anc.apm.activecommunities.com/seattle/activity/search/detail/83528"
     },
     {
         "title": "Screen Printing Workshop",
@@ -17,7 +17,7 @@ const WORKSHOPS = [
         "time": "11:30 - 2:30 PM",
         "description": "Learn the basics of screenprinting with the Seattle Printers' Guild! You will design your own small image, create a screen, and make prints of your design. No experience necessary, drop in at any time. ",
         "location": "Federal Way Library 1st Ave",
-        "url": "https://partiful.com/e/sfw0JFp7JiICEu8lDUtq"
+        "url": "https://partiful.com/e/cq1oW2NhJDT5AcVXyEKj"
     },
     {
         "past": true,
