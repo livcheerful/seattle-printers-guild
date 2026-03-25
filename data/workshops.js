@@ -1,5 +1,15 @@
 const WORKSHOPS = [
     {
+        "title": "Seattle Art Book Fair",
+        "month": 5,
+        "day": 9,
+        "year": 2026,
+        "time": "11 - 5 PM",
+        "description": "Visit the guild at Seattle Art Book Fair May 9-10! Guild members Slow Nights Studios and Vivian Li will be tabling with zines, prints, and more.",
+        "location": "Washington Hall",
+        "url": "https://www.seattleartbookfair.org/"
+    },
+    {
         "title": "Make Your Own Book",
         "month": 4,
         "day": 17,
