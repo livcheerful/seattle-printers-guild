@@ -42,6 +42,8 @@ const loadWorkshops = () => {
   });
 
   const workshopContainer = document.getElementById("workshops");
+  if (!workshopContainer) return;
+
   const upcomingWorkshops = WORKSHOPS.filter(
     (w) =>
       w.year >= currentYear &&
@@ -66,15 +68,16 @@ const loadWorkshops = () => {
     divWithContent(w.description, detailsDiv);
 
     const button = document.createElement("a");
+    button.classList.add("btn")
     if (!!w.url) {
       button.href = w.url;
       button.innerHTML = "Register!";
       button.target = "_blank";
+      detailsDiv.appendChild(button);
     } else {
       button.innerHTML = "Coming soon";
       button.classList.add("disabled");
     }
-    detailsDiv.appendChild(button);
 
     workshopDiv.appendChild(detailsDiv);
     workshopContainer.appendChild(workshopDiv);
@@ -83,6 +86,8 @@ const loadWorkshops = () => {
 
 const loadPastEvents = () => {
   const pastWorkshopContainer = document.getElementById("past-events");
+  if (!pastWorkshopContainer) return;
+
   const pastWorkshops = WORKSHOPS.reverse()
     .filter((w) => w.past)
     .slice(0, 3);

@@ -1,5 +1,14 @@
 const WORKSHOPS = [
     {
+        "title": "Zine Meetup",
+        "month": 6,
+        "day": 12,
+        "year": 2026,
+        "time": "5 - 8 PM",
+        "location": "Paper Pushers (1200 5th Ave)",
+        "description": "Let's make some zines together! Come to Paper Pushers for an evening of creating -- bring a work-in-progress, an ongoing project, or just an awesome idea you haven't quite had the time to get to. Markers, colored pencils, paper, and other art supplies provided!",
+    },
+    {
         "title": "Sunday Art Cafe: TABLETOP GAMES",
         "month": 6,
         "day": 14,
@@ -7,6 +16,15 @@ const WORKSHOPS = [
         "time": "11 - 2 PM",
         "location": "Paper Pushers (1200 5th Ave)",
         "description": "Join us for creative exercises led by various local artists. This Sunday art cafe is hosted by Caro Asercion, author and designer of indie TTRPGs including Exquisite Biome and Last Train to Bremen. Drop in for facilitated sessions of their GMless world-building game i'm sorry did you say street magic -- let's invent neighborhoods, sketch out maps, and build fantastic cities together!",
+    },
+    {
+        "title": "Drop-in portraits with Schnekk",
+        "month": 6,
+        "day": 10,
+        "year": 2026,
+        "time": "11 - 5 PM",
+        "location": "Paper Pushers (1200 5th Ave)",
+        "description": "Swing by Paper Pushers any time this Wednesday and get a live portrait of yourself (or of your friends, family, or pets) by illustrator and comic artist Schnekk!",
     },
     {
         "title": "Sunday Art Cafe: TEXTURE HUNT",
