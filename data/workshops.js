@@ -1,5 +1,23 @@
 const WORKSHOPS = [
     {
+        "title": "Sunday Art Cafe: TABLETOP GAMES",
+        "month": 6,
+        "day": 14,
+        "year": 2026,
+        "time": "11 - 2 PM",
+        "location": "Paper Pushers (1200 5th Ave)",
+        "description": "Join us for creative exercises led by various local artists. This Sunday art cafe is hosted by Caro Asercion, author and designer of indie TTRPGs including Exquisite Biome and Last Train to Bremen. Drop in for facilitated sessions of their GMless world-building game i'm sorry did you say street magic -- let's invent neighborhoods, sketch out maps, and build fantastic cities together!",
+    },
+    {
+        "title": "Sunday Art Cafe: TEXTURE HUNT",
+        "month": 5,
+        "day": 31,
+        "year": 2026,
+        "time": "11 - 2 PM",
+        "location": "Paper Pushers (1200 5th Ave)",
+        "description": "Exercise your creative brain and join us for creative exercises led by various local artists. This sunday art cafe is hosted by the Seattle Printers Guild, where we’ll see what impressions we can create a stamp of.",
+    },
+    {
         "title": "Seattle Art Book Fair",
         "month": 5,
         "day": 9,

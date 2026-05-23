@@ -126,6 +126,14 @@ h1, h2, h3 {
     width: 100%;
 }
 
+#cal-sm, #cal-lg {
+    width: 100%;
+}
+
+#cal-sm {
+    display: none;
+}
+
 .workshop {
     display: flex;
     margin-bottom: 1rem;
@@ -290,6 +298,13 @@ h1, h2, h3 {
     .slide-img img {
         height: 100%;
         width: auto;
+    }
+
+    #cal-sm {
+        display: block;
+    }
+    #cal-lg {
+        display: none;
     }
 }
 
